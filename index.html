@@ -17,15 +17,27 @@
     <section id="projects" class="fade-in">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Brief description of the project.</p>
-            <a href="#">View Project</a>
+            <h3>MiniGames</h3>
+            <p>A collection of small games developed to enhance programming skills and explore various game development techniques. Each game serves as a standalone project, offering unique challenges and learning opportunities.</p>
+            <a href="https://github.com/DennisDalton671/MiniGames">View Project</a>
         </div>
         
         <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Brief description of another project.</p>
-            <a href="#">View Project</a>
+            <h3>SteamCharts</h3>
+            <p>An Android application that provides a seamless interface for gamers to track statistics of Steam games. Users can access real-time player counts, game descriptions, recent review scores, pricing, and discounts, offering an in-depth look into gaming trends and preferences.</p>
+            <a href="https://github.com/DennisDalton671/SteamCharts">View Project</a>
+        </div>
+        
+        <div class="project">
+            <h3>Tetris_AI</h3>
+            <p>An implementation of a Tetris game integrated with an AI agent designed to play the game autonomously. The project explores artificial intelligence techniques and algorithms to optimize gameplay strategies within the classic Tetris framework.</p>
+            <a href="https://github.com/DennisDalton671/Tetris_AI">View Project</a>
+        </div>
+        
+        <div class="project">
+            <h3>FreeRunners</h3>
+            <p>An online or single-player 3D platforming game where the main objective is to reach the end goal as quickly as possible, either competing against others or playing solo. The game features diverse environments and obstacles that challenge players as they progress through various levels.</p>
+            <a href="https://github.com/DennisDalton671/FreeRunners">View Project</a>
         </div>
     </section>
     
@@ -51,13 +63,6 @@
             });
         });
         sections.forEach(section => observer.observe(section));
-
-        // Terminal Mode Easter Egg
-        document.addEventListener("keydown", function(event) {
-            if (event.ctrlKey && event.key === "t") {
-                document.body.classList.toggle("terminal-mode");
-            }
-        });
     </script>
 </body>
 </html>
