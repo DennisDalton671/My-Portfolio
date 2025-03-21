@@ -11,9 +11,10 @@
         <h1>Dennis Dalton</h1>
         <p>Innovative Problem-Solver | Passionate About Technology & Engineering</p>
         <a href="#" class="btn">Download Resume</a>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </header>
     
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
         <div class="project">
             <h3>Project Title 1</h3>
@@ -28,10 +29,35 @@
         </div>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:DennisDalton671@gmail.com">DennisDalton671@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/DennisDalton671">github.com/DennisDalton671</a></p>
     </section>
+
+    <script>
+        // Dark Mode Toggle
+        document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+            document.body.classList.toggle("light-mode");
+        });
+
+        // Fade-in Effect
+        const sections = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        sections.forEach(section => observer.observe(section));
+
+        // Terminal Mode Easter Egg
+        document.addEventListener("keydown", function(event) {
+            if (event.ctrlKey && event.key === "t") {
+                document.body.classList.toggle("terminal-mode");
+            }
+        });
+    </script>
 </body>
 </html>
