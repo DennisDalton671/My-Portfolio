@@ -6,6 +6,13 @@ body {
     background-color: #121212;
     color: white;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode Styling */
+.light-mode {
+    background-color: white;
+    color: black;
 }
 
 /* Header Section */
@@ -38,6 +45,32 @@ header p {
 
 .btn:hover {
     background-color: #ffcccc;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #990000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #ffcccc;
+}
+
+.light-mode #dark-mode-toggle {
+    background-color: #990000;
+    color: white;
+}
+
+.light-mode #dark-mode-toggle:hover {
+    background-color: #ff4444;
 }
 
 /* Project Section */
@@ -89,4 +122,16 @@ header p {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+/* Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
