@@ -159,9 +159,9 @@ header p {
 /* Video Styling */
 .video-container video {
     width: 65%;  /* Slightly larger, but still responsive */
-    max-width: 600px;  /* Prevents it from getting too large */
+    max-width: 300px;  /* Prevents it from getting too large */
     height: auto;  /* Ensures it keeps its aspect ratio */
-    max-height: 300px; /* Adjusted to be larger but not overwhelming */
+    max-height: 600px; /* Adjusted to be larger but not overwhelming */
     border-radius: 10px; /* Rounded edges for a smoother look */
     box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Subtle red glow */
     object-fit: contain; /* Ensures video scales properly within its bounds */
