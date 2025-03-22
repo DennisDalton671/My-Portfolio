@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const projectLinks = document.querySelectorAll(".project a");
+
+            projectLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let href = this.getAttribute("href");
+
+                    // Add fade-out effect before redirecting
+                    document.body.classList.add("fade-out");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); // Delay matches CSS animation duration
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -16,28 +34,29 @@
     
     <section id="projects" class="fade-in">
         <h2>Projects</h2>
+
         <div class="project">
-            <h3>MiniGames (Space Rocks, Wing Dash, Neon Serpent)</h3>
-            <p>A collection of small games developed to enhance programming skills and explore various game development techniques. Includes **Space Rocks** (Asteroids-inspired), **Wing Dash** (Flappy Bird-inspired), and **Neon Serpent** (Snake-inspired), each offering unique challenges.</p>
-            <a href="https://github.com/DennisDalton671/MiniGames">View Project</a>
+            <h3>MiniGames</h3>
+            <p>A collection of small games developed to enhance programming skills and explore various game development techniques.</p>
+            <a href="minigames.html" class="btn">View Project</a>
         </div>
         
         <div class="project">
             <h3>SteamCharts</h3>
-            <p>An Android application that provides a seamless interface for gamers to track statistics of Steam games. Users can access real-time player counts, game descriptions, recent review scores, pricing, and discounts, offering an in-depth look into gaming trends and preferences.</p>
-            <a href="https://github.com/DennisDalton671/SteamCharts">View Project</a>
+            <p>An Android application that provides a seamless interface for gamers to track statistics of Steam games.</p>
+            <a href="steamcharts.html" class="btn">View Project</a>
         </div>
         
         <div class="project">
-            <h3>BlockDrop AI (formerly Tetris AI)</h3>
-            <p>An implementation of a block-dropping puzzle game with an AI agent designed to play autonomously. The project explores artificial intelligence techniques and algorithms to optimize gameplay strategies within the classic falling block mechanics.</p>
-            <a href="https://github.com/DennisDalton671/Tetris_AI">View Project</a>
+            <h3>BlockDrop AI</h3>
+            <p>An implementation of a block-dropping puzzle game with an AI agent designed to play autonomously.</p>
+            <a href="blockdrop-ai.html" class="btn">View Project</a>
         </div>
         
         <div class="project">
             <h3>FreeRunners</h3>
-            <p>An online or single-player 3D platforming game where the main objective is to reach the end goal as quickly as possible, either competing against others or playing solo. The game features diverse environments and obstacles that challenge players as they progress through various levels.</p>
-            <a href="https://github.com/DennisDalton671/FreeRunners">View Project</a>
+            <p>An online or single-player 3D platforming game where the main objective is to reach the end goal as quickly as possible.</p>
+            <a href="freerunners.html" class="btn">View Project</a>
         </div>
     </section>
     
