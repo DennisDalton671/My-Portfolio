@@ -179,3 +179,10 @@ ul li {
     margin-bottom: 10px; /* Adds spacing between bullet points */
     font-size: 1.1rem; /* Slightly larger text for readability */
 }
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden; /* Hides any horizontal overflow */
+    width: 100%; /* Ensures it fits within the screen */
+    margin: 0; /* Removes extra spacing that might cause scrolling */
+}
