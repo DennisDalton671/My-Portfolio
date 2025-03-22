@@ -154,19 +154,19 @@ header p {
     align-items: center;
     width: 100%;
     padding: 20px;
+    overflow: hidden;
 }
 
-/* Video Styling */
+/* Video Styling (Portrait Format) */
 .video-container video {
-    width: 65%;  /* Slightly larger, but still responsive */
-    max-width: 300px;  /* Prevents it from getting too large */
-    height: auto;  /* Ensures it keeps its aspect ratio */
-    max-height: 600px; /* Adjusted to be larger but not overwhelming */
-    border-radius: 10px; /* Rounded edges for a smoother look */
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Subtle red glow */
-    object-fit: contain; /* Ensures video scales properly within its bounds */
+    height: 80vh; /* Prioritizes height, taking up 80% of the screen height */
+    max-height: 720px; /* Matches the native height of 720p portrait */
+    width: auto; /* Auto-adjust width to maintain aspect ratio */
+    max-width: 405px; /* Keeps proper 9:16 aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+    object-fit: contain;
 }
-
 /* Fix Bullet Point Alignment */
 ul {
     list-style-position: inside; /* Moves bullet points inside the text */
