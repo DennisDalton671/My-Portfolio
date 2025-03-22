@@ -158,10 +158,10 @@ header p {
 
 /* Video Styling */
 .video-container video {
-    width: 80%;  /* Adjusts width relative to the screen */
-    max-width: 600px;  /* Prevents it from being too large */
-    height: auto;  /* Ensures aspect ratio is maintained */
-    max-height: 350px; /* Limits video height to prevent it from being too big */
-    border-radius: 10px; /* Optional: Rounded edges for a cleaner look */
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Adds a subtle red glow */
+    width: 60%;  /* Makes video take up less width */
+    max-width: 500px;  /* Smaller max size */
+    height: auto;  /* Maintains aspect ratio */
+    max-height: 250px; /* Limits video height even more */
+    border-radius: 10px; /* Optional: Rounded edges */
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Subtle red glow */
 }
