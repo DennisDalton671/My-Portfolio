@@ -159,14 +159,15 @@ header p {
 
 /* Video Styling (Portrait Format) */
 .video-container video {
-    height: 80vh; /* Prioritizes height, taking up 80% of the screen height */
-    max-height: 720px; /* Matches the native height of 720p portrait */
-    width: auto; /* Auto-adjust width to maintain aspect ratio */
-    max-width: 405px; /* Keeps proper 9:16 aspect ratio */
+    height: 75vh; /* Prevents it from being too large on PC */
+    max-height: 720px; /* Ensures proper size for 720p portrait */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Ensures it stays centered */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
     object-fit: contain;
 }
+
 /* Fix Bullet Point Alignment */
 ul {
     list-style-position: inside; /* Moves bullet points inside the text */
