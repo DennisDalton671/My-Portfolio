@@ -159,11 +159,11 @@ header p {
 
 /* Video Styling */
 .video-container video {
-    width: 50%;  /* Adjusted for a smaller, clean look */
-    max-width: 400px;  /* Prevents it from getting too large */
+    width: 65%;  /* Slightly larger, but still responsive */
+    max-width: 500px;  /* Prevents it from getting too large */
     height: auto;  /* Ensures it keeps its aspect ratio */
-    max-height: 200px; /* Enforces height restriction */
-    border-radius: 10px; /* Optional: Rounded edges */
+    max-height: 300px; /* Adjusted to be larger but not overwhelming */
+    border-radius: 10px; /* Rounded edges for a smoother look */
     box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Subtle red glow */
     object-fit: contain; /* Ensures video scales properly within its bounds */
 }
