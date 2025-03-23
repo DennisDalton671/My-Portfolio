@@ -42,31 +42,47 @@
     </footer>
 
     <script>
-        
-        document.addEventListener("DOMContentLoaded", function () {
-                const darkModeToggle = document.getElementById("dark-mode-toggle");
+    document.addEventListener("DOMContentLoaded", function () {
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
 
-            // Check if dark mode was previously enabled
-                const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+        function applyDarkModePreference() {
+            const isLightMode = localStorage.getItem("darkMode") === "enabled";
 
-            if (isDarkMode) {
-                document.body.classList.add("light-mode"); // or dark-mode depending on your CSS
-            }
-
-            // Toggle dark mode and save the preference
-            darkModeToggle.addEventListener("click", function () {
-            document.body.classList.toggle("light-mode");
-
-            // Save the mode in localStorage
-            if (document.body.classList.contains("light-mode")) {
-                localStorage.setItem("darkMode", "enabled");
+            if (isLightMode) {
+                document.body.classList.add("light-mode");  // Switch to light mode
             } else {
-                localStorage.setItem("darkMode", "disabled");
+                document.body.classList.remove("light-mode"); // Default to dark mode
             }
-        });
-    });
+        }
 
-    </script>
+        applyDarkModePreference(); // Apply preference on page load
+
+        // Dark Mode Toggle Button
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener("click", function () {
+                document.body.classList.toggle("light-mode");
+
+                // Save user preference
+                if (document.body.classList.contains("light-mode")) {
+                    localStorage.setItem("darkMode", "enabled");
+                } else {
+                    localStorage.setItem("darkMode", "disabled");
+                }
+            });
+        }
+
+        // Fade-in Effect for Sections
+        const sections = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        sections.forEach(section => observer.observe(section));
+    });
+</script>
     
 </body>
 </html>
