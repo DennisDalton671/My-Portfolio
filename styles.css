@@ -124,19 +124,36 @@ header p {
     text-decoration: underline;
 }
 
-/* Contact Section */
+/* Default: Dark Mode (Text is White) */
 #contact {
     padding: 50px 20px;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Dark background */
+    color: white; /* Ensure text stays white */
 }
 
+/* Ensure Contact Links are Visible in Dark Mode */
 #contact a {
-    color: #ff4444;
+    color: #ff4444; /* Red color for visibility */
     text-decoration: none;
     font-weight: bold;
 }
 
 #contact a:hover {
+    text-decoration: underline;
+}
+
+/* Light Mode Adjustments */
+.light-mode #contact {
+    background-color: #f5f5f5; /* Light background */
+    color: black; /* Ensure text turns black */
+}
+
+/* Ensure Contact Links are Visible in Light Mode */
+.light-mode #contact a {
+    color: #cc0000; /* Darker red for visibility */
+}
+
+.light-mode #contact a:hover {
     text-decoration: underline;
 }
 
