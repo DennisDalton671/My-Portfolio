@@ -17,8 +17,16 @@
         <!-- About Section -->
         <div class="section-card">
             <h2>About SteamCharts</h2>
-            <p>SteamCharts was inspired by web-based tracking sites and designed as a **mobile-first** alternative to check **real-time player statistics** for Steam games.  
-                This was one of my **first Android apps** built using **Android Studio & Kotlin**, where I worked with APIs and databases for the first time.</p>
+            <p>SteamCharts was inspired by web-based tracking sites, and I wanted to develop a <strong>mobile-first</strong> alternative to check 
+                <strong>real-time player statistics</strong> for Steam games. This was also one of the first apps I built using 
+                <strong>Android Studio</strong> and <strong>Kotlin</strong>. It was my first time working with databases to store 
+                and access game-related data, and it was also my first experience using APIs to pull live data for users.</p>
+            <p>One of the biggest challenges I faced was parsing Steam’s API data. Their JSON structure is somewhat nested, 
+                meaning the actual game information (like <strong>player count</strong>, <strong>description</strong>, and 
+                <strong>pricing</strong>) was buried within multiple layers of data. Figuring out how to extract the relevant 
+                data efficiently took some time, but overcoming this challenge improved my understanding of handling APIs 
+                and JSON data in Android development.</p>
+            
             <ul class="icon-list">
                 <li>📊 <strong>Live Player Tracking</strong> – Displays real-time Steam player counts.</li>
                 <li>🔍 <strong>Game Insights</strong> – Provides game descriptions, reviews, and pricing.</li>
@@ -28,24 +36,10 @@
 
         <div class="section-divider"></div> <!-- Divider -->
 
-        <!-- Challenges & Learning Section -->
-        <div class="section-card">
-            <h2>Challenges & Lessons Learned</h2>
-            <p>One of the biggest challenges I faced was **parsing Steam's API data**.  
-                Their **JSON responses** often nest data inside multiple layers, which made accessing useful information (player count, description, price) frustrating.</p>
-            <ul class="icon-list">
-                <li>📌 **Parsing Nested JSON** – Steam stores its data inside another JSON object, making extraction tricky.</li>
-                <li>🗃 **Working with Databases** – First time implementing **data storage & retrieval** in an Android app.</li>
-                <li>⚡ **Optimized API Calls** – Learned how to **minimize API requests** to avoid unnecessary data fetching.</li>
-            </ul>
-        </div>
-
-        <div class="section-divider"></div> <!-- Divider -->
-
         <!-- App Demo Section -->
         <div class="section-card">
             <h2>App Demo</h2>
-            <div class="video-container portrait">
+            <div class="video-container">
                 <video autoplay loop muted playsinline>
                     <source src="../videos/SteamChartsDemo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -58,25 +52,24 @@
         <!-- Technical Details -->
         <div class="section-card">
             <h2>Technical Details</h2>
-            <p>SteamCharts was built using **Android Studio & Kotlin** and connects to Steam’s **public API** to fetch live data.</p>
+            <p>SteamCharts was developed using <strong>Kotlin</strong> in <strong>Android Studio</strong> and makes use of the 
+                <strong>Steam Web API</strong> to fetch and display live game statistics.</p>
             <ul class="icon-list">
-                <li>📡 <strong>Data API:</strong> Uses **Steam’s API** for live player counts & pricing.</li>
-                <li>📱 <strong>Mobile-Optimized UI:</strong> Designed for a seamless Android experience.</li>
-                <li>⚡ <strong>Performance:</strong> API calls optimized to reduce unnecessary network requests.</li>
+                <li>📱 <strong>Android Development:</strong> Built natively using Kotlin & Jetpack Compose.</li>
+                <li>🔗 <strong>API Integration:</strong> Uses Steam's public API to retrieve player counts & pricing.</li>
+                <li>💾 <strong>Data Storage:</strong> Implements local caching for faster performance.</li>
+                <li>📊 <strong>Dynamic UI:</strong> Responsive interface for viewing game trends in real time.</li>
             </ul>
         </div>
 
         <div class="section-divider"></div> <!-- Divider -->
 
-        <!-- Try It Out Section -->
+        <!-- Links Section -->
         <div class="section-card">
-            <h2>Try SteamCharts</h2>
-            <p>Check out the **source code on GitHub** or try the app (if available).</p>
-            <div class="cta-container">
-                <a href="https://github.com/DennisDalton671/SteamCharts" target="_blank" class="btn">View Source Code</a>
-                <!-- If there's a download link for the app, add it below -->
-                <!-- <a href="APP_DOWNLOAD_LINK" target="_blank" class="btn secondary-btn">Download App</a> -->
-            </div>
+            <h2>Project Links</h2>
+            <ul class="project-links">
+                <li>🔗 <a href="https://github.com/DennisDalton671/SteamCharts" target="_blank"><strong>GitHub Repository</strong></a> – View the source code.</li>
+            </ul>
         </div>
     </section>
 
@@ -85,46 +78,46 @@
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        document.addEventListener("DOMContentLoaded", function () {
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
 
-        function applyDarkModePreference() {
-            const isLightMode = localStorage.getItem("darkMode") === "enabled";
+            function applyDarkModePreference() {
+                const isLightMode = localStorage.getItem("darkMode") === "enabled";
 
-            if (isLightMode) {
-                document.body.classList.add("light-mode");  // Switch to light mode
-            } else {
-                document.body.classList.remove("light-mode"); // Default to dark mode
-            }
-        }
-
-        applyDarkModePreference(); // Apply preference on page load
-
-        // Dark Mode Toggle Button
-        if (darkModeToggle) {
-            darkModeToggle.addEventListener("click", function () {
-                document.body.classList.toggle("light-mode");
-
-                // Save user preference
-                if (document.body.classList.contains("light-mode")) {
-                    localStorage.setItem("darkMode", "enabled");
+                if (isLightMode) {
+                    document.body.classList.add("light-mode");  // Switch to light mode
                 } else {
-                    localStorage.setItem("darkMode", "disabled");
+                    document.body.classList.remove("light-mode"); // Default to dark mode
                 }
-            });
-        }
+            }
 
-        // Fade-in Effect for Sections
-        const sections = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+            applyDarkModePreference(); // Apply preference on page load
+
+            // Dark Mode Toggle Button
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener("click", function () {
+                    document.body.classList.toggle("light-mode");
+
+                    // Save user preference
+                    if (document.body.classList.contains("light-mode")) {
+                        localStorage.setItem("darkMode", "enabled");
+                    } else {
+                        localStorage.setItem("darkMode", "disabled");
+                    }
+                });
+            }
+
+            // Fade-in Effect for Sections
+            const sections = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
             });
+            sections.forEach(section => observer.observe(section));
         });
-        sections.forEach(section => observer.observe(section));
-    });
     </script>
 </body>
 </html>
