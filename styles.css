@@ -303,12 +303,3 @@ ul li {
     text-align: center;
     margin-top: 20px;
 }
-
-.secondary-btn {
-    background-color: #222; /* Darker button for contrast */
-    border: 2px solid #ff4444;
-}
-
-.secondary-btn:hover {
-    background-color: #333;
-}
