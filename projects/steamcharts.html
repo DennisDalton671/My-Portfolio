@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SteamCharts</title>
+    <title>SteamCharts | Dennis Dalton</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -13,28 +13,57 @@
         <a href="../index.html" class="btn">Back to Portfolio</a>
     </header>
 
-    <section id="about">
-        <h2>About SteamCharts</h2>
-        <ul>
-            <li>📊 <strong>Live Player Tracking</strong> – Displays real-time Steam player counts.</li>
-            <li>🔍 <strong>Game Insights</strong> – Provides game descriptions, reviews, and pricing.</li>
-            <li>💰 <strong>Discount Alerts</strong> – Shows game discounts and special offers.</li>
-        </ul>
-    </section>
-
-    <section id="demo">
-        <h2>App Demo</h2>
-        <div class="video-container">
-            <video controls>
-                <source src="../videos/SteamChartsDemo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <section class="content-container">
+        <!-- About Section -->
+        <div class="section-card">
+            <h2>About SteamCharts</h2>
+            <p>SteamCharts is an **Android application** I developed to provide real-time Steam player statistics, insights, and discount alerts.  
+                The goal was to create an efficient and visually appealing way for gamers to track the most-played Steam games at any time.</p>
+            <ul class="icon-list">
+                <li>📊 <strong>Live Player Tracking</strong> – Displays real-time Steam player counts.</li>
+                <li>🔍 <strong>Game Insights</strong> – Provides game descriptions, reviews, and pricing.</li>
+                <li>💰 <strong>Discount Alerts</strong> – Shows game discounts and special offers.</li>
+            </ul>
         </div>
-    </section>
 
-    <section id="details">
-        <h2>Technical Details</h2>
-        <p>[Placeholder for APIs, data parsing, UI/UX design, etc.]</p>
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- App Demo Section -->
+        <div class="section-card">
+            <h2>App Demo</h2>
+            <div class="video-container portrait">
+                <video autoplay loop muted playsinline>
+                    <source src="../videos/SteamChartsDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Technical Details -->
+        <div class="section-card">
+            <h2>Technical Details</h2>
+            <p>SteamCharts was built using Android Studio and integrates with Steam's public API to fetch real-time data. The app features:</p>
+            <ul class="icon-list">
+                <li>📡 <strong>Data API:</strong> Uses Steam's API for live game data.</li>
+                <li>📱 <strong>Mobile-Optimized UI:</strong> Designed for a smooth user experience on Android.</li>
+                <li>⚡ <strong>Performance:</strong> Optimized for real-time updates with minimal latency.</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Try It Out Section -->
+        <div class="section-card">
+            <h2>Try SteamCharts</h2>
+            <p>Check out the source code on GitHub or try the app (if available).</p>
+            <div class="cta-container">
+                <a href="https://github.com/DennisDalton671/SteamCharts" target="_blank" class="btn">View Source Code</a>
+                <!-- If there's a download link for the app, add it below -->
+                <!-- <a href="APP_DOWNLOAD_LINK" target="_blank" class="btn secondary-btn">Download App</a> -->
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -82,7 +111,6 @@
         });
         sections.forEach(section => observer.observe(section));
     });
-</script>
-    
+    </script>
 </body>
 </html>
