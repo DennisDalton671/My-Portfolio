@@ -316,10 +316,6 @@ ul li {
     margin: 10px;
 }
 
-.btn:hover {
-    background-color: #cc0000;
-}
-
 .secondary-btn {
     background-color: #222; /* Darker button for contrast */
     border: 2px solid #ff4444;
