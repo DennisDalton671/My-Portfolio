@@ -71,8 +71,40 @@
     </section>
 
     <script>
-        // Apply dark mode & fade-in effects
-        applyDarkModePreference();
+    document.addEventListener("DOMContentLoaded", function () {
+        const projectLinks = document.querySelectorAll(".project a");
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+        // Ensure Dark Mode Preference is Applied
+        function applyDarkModePreference() {
+            const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+            if (isDarkMode) {
+                document.body.classList.add("light-mode");
+            }
+        }
+
+        applyDarkModePreference(); // Call this function immediately on load
+
+        // Dark Mode Toggle Button
+        darkModeToggle.addEventListener("click", function () {
+            document.body.classList.toggle("light-mode");
+            const isLightMode = document.body.classList.contains("light-mode");
+            localStorage.setItem("darkMode", isLightMode ? "enabled" : "disabled");
+        });
+
+        // Project Page Fade-Out Transition
+        projectLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                let href = this.getAttribute("href");
+
+                // Add fade-out effect before redirecting
+                document.body.classList.add("fade-out");
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Delay matches CSS animation duration
+            });
+        });
 
         // Fade-in Effect
         const sections = document.querySelectorAll('.fade-in');
@@ -84,6 +116,7 @@
             });
         });
         sections.forEach(section => observer.observe(section));
-    </script>
+    });
+</script>
 </body>
 </html>
