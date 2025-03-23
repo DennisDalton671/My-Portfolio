@@ -246,6 +246,15 @@ ul li {
     transition: transform 0.2s ease-in-out;
 }
 
+.section-card h2 {
+    margin-bottom: 15px; /* Adds space below the section title */
+}
+
+.section-card p {
+    line-height: 1.6; /* Increases spacing between lines for readability */
+    margin-bottom: 15px; /* Adds space below paragraph */
+}
+
 .section-card:hover {
     transform: translateY(-3px); /* Slight lift on hover for effect */
 }
