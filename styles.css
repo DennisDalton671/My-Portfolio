@@ -196,13 +196,3 @@ ul li {
     font-size: 1.1rem; /* Slightly larger text for readability */
 }
 
-/* Fix Double Scrolling Issue */
-html {
-    overflow-x: hidden; /* Prevents side scrolling */
-    height: 100%; /* Ensures full page height */
-}
-
-/* Ensure content fills space but doesn't create extra scrollbars */
-#projects, #contact {
-    flex-grow: 1;  /* Ensures sections take up necessary space without causing overflow */
-}
