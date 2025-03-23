@@ -202,7 +202,7 @@ header p {
 /* Video Styling for Landscape (16:9) */
 .video-container.landscape video {
     width: 80vw;  /* Takes 80% of the viewport width */
-    max-width: 1280px; /* Maximum width for large screens */
+    max-width: 640px; /* Maximum width for large screens */
     height: auto; /* Keeps aspect ratio */
     aspect-ratio: 16 / 9; /* Ensures 16:9 scaling */
     border-radius: 10px;
