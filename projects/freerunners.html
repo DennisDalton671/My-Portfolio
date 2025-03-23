@@ -15,6 +15,10 @@
 
     <section id="about">
         <h2>About FreeRunners</h2>
+        <p>
+            FreeRunners is a **high-speed 3D platformer** designed for players who love the thrill of precision movement. 
+            Inspired by **parkour** mechanics and speedrunning culture, it challenges players to navigate dynamic environments as efficiently as possible.
+        </p>
         <ul>
             <li>🏃 <strong>Speed-Based Gameplay</strong> – Focused on precision movement & fast reactions.</li>
             <li>🌍 <strong>Dynamic Environments</strong> – Multiple obstacle courses & levels.</li>
@@ -23,18 +27,51 @@
     </section>
 
     <section id="demo">
-    <h2>Gameplay Demo</h2>
-    <div class="video-container landscape"> <!-- Add 'landscape' class -->
-        <video autoplay loop muted playsinline>
-            <source src="../videos/FreeRunnersDemo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+        <h2>Gameplay Demo</h2>
+        <div class="video-container landscape"> <!-- Video with landscape ratio -->
+            <video autoplay loop muted playsinline>
+                <source src="../videos/FreeRunnersDemo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>A short preview showcasing the fluid parkour movement and obstacle-based gameplay.</p>
     </section>
 
-    <section id="details">
-        <h2>Technical Details</h2>
-        <p>[Placeholder for game engine, physics system, and player mechanics.]</p>
+    <section id="screenshots">
+        <h2>Game Screenshots</h2>
+        <div class="screenshot-gallery">
+            <img src="../images/freerunners1.png" alt="Player running through a neon cityscape">
+            <img src="../images/freerunners2.png" alt="Wall-running mechanic in action">
+            <img src="../images/freerunners3.png" alt="Speed boost section in the game">
+        </div>
+    </section>
+
+    <section id="challenges">
+        <h2>Challenges & Solutions</h2>
+        <p><strong>Issue:</strong> Implementing smooth **wall-running mechanics** without breaking the physics engine.</p>
+        <p><strong>Solution:</strong> Created a custom collision system that dynamically detects surfaces and adjusts gravity for seamless transitions.</p>
+
+        <p><strong>Issue:</strong> Keeping **multiplayer latency low** while syncing player movement accurately.</p>
+        <p><strong>Solution:</strong> Optimized network packets to only send critical movement data and introduced client-side prediction to reduce lag.</p>
+    </section>
+
+    <section id="tech">
+        <h2>Tools & Skills Used</h2>
+        <ul>
+            <li>🛠 **Game Engine:** Unity with C#</li>
+            <li>🖥 **Networking:** Photon PUN (Multiplayer)</li>
+            <li>🎮 **Physics System:** Custom character controller</li>
+            <li>🎨 **Level Design:** Procedural environment generation</li>
+        </ul>
+    </section>
+
+    <section id="future">
+        <h2>Future Plans</h2>
+        <p>
+            Right now, FreeRunners is a **solid prototype**, but I want to refine the level design and add 
+            **leaderboards for global speedrun rankings.** Additionally, I’d like to experiment with **VR support** 
+            for an even more immersive experience.
+        </p>
     </section>
 
     <footer>
@@ -47,11 +84,10 @@
 
         function applyDarkModePreference() {
             const isLightMode = localStorage.getItem("darkMode") === "enabled";
-
             if (isLightMode) {
-                document.body.classList.add("light-mode");  // Switch to light mode
+                document.body.classList.add("light-mode");
             } else {
-                document.body.classList.remove("light-mode"); // Default to dark mode
+                document.body.classList.remove("light-mode");
             }
         }
 
@@ -61,13 +97,7 @@
         if (darkModeToggle) {
             darkModeToggle.addEventListener("click", function () {
                 document.body.classList.toggle("light-mode");
-
-                // Save user preference
-                if (document.body.classList.contains("light-mode")) {
-                    localStorage.setItem("darkMode", "enabled");
-                } else {
-                    localStorage.setItem("darkMode", "disabled");
-                }
+                localStorage.setItem("darkMode", document.body.classList.contains("light-mode") ? "enabled" : "disabled");
             });
         }
 
@@ -82,7 +112,6 @@
         });
         sections.forEach(section => observer.observe(section));
     });
-</script>
-    
+    </script>
 </body>
 </html>
