@@ -7,7 +7,12 @@ body {
     color: white;
     text-align: center;
     transition: background 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensures body covers full viewport height */
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
+
 
 /* Light Mode Styling */
 .light-mode {
@@ -192,23 +197,12 @@ ul li {
 }
 
 /* Fix Double Scrolling Issue */
-html, body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Only allow vertical scrolling */
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html {
+    overflow-x: hidden; /* Prevents side scrolling */
+    height: 100%; /* Ensures full page height */
 }
 
-/* Ensure body does not exceed viewport */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures full height without forcing extra scrolling */
-}
-
-/* Prevent extra space causing double scrolling */
+/* Ensure content fills space but doesn't create extra scrollbars */
 #projects, #contact {
-    flex-grow: 1; /* Ensures content doesn't overflow unexpectedly */
+    flex-grow: 1;  /* Ensures sections take up necessary space without causing overflow */
 }
