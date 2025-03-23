@@ -304,18 +304,6 @@ ul li {
     margin-top: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #ff4444;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-    margin: 10px;
-}
-
 .secondary-btn {
     background-color: #222; /* Darker button for contrast */
     border: 2px solid #ff4444;
