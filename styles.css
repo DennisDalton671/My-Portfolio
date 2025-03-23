@@ -9,6 +9,7 @@ body {
     transition: background 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;  /* Ensures body covers full viewport height */
     overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
@@ -123,36 +124,19 @@ header p {
     text-decoration: underline;
 }
 
-/* Contact Section Fix */
+/* Contact Section */
 #contact {
     padding: 50px 20px;
-    background-color: #1a1a1a; /* Dark mode background */
-    color: white; /* Ensures text is white */
+    background-color: #1a1a1a;
 }
 
-/* Ensure Contact Links are Visible in Dark Mode */
 #contact a {
-    color: #ff4444; /* Red color for visibility */
+    color: #ff4444;
     text-decoration: none;
     font-weight: bold;
 }
 
 #contact a:hover {
-    text-decoration: underline;
-}
-
-/* Light Mode Adjustments */
-.light-mode #contact {
-    background-color: #f5f5f5; /* Light background */
-    color: black; /* Ensure text turns black */
-}
-
-/* Ensure Contact Links are Visible in Light Mode */
-.light-mode #contact a {
-    color: #cc0000; /* Darker red for visibility */
-}
-
-.light-mode #contact a:hover {
     text-decoration: underline;
 }
 
@@ -213,14 +197,12 @@ ul li {
 }
 
 /* Fix Double Scrolling Issue */
-html, body {
+html {
     overflow-x: hidden; /* Prevents side scrolling */
-    overflow-y: auto; /* Ensures normal scrolling */
-    margin: 0;
-    padding: 0;
+    height: 100%; /* Ensures full page height */
 }
 
-/* Ensure content sections fill space but don't stretch */
+/* Ensure content fills space but doesn't create extra scrollbars */
 #projects, #contact {
-    min-height: 60vh; /* Ensures they take space but don't force extra height */
+    flex-grow: 1;  /* Ensures sections take up necessary space without causing overflow */
 }
