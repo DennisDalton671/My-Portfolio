@@ -21,6 +21,9 @@
                     }, 500); // Delay matches CSS animation duration
                 });
             });
+
+            // Apply Dark Mode
+            applyDarkModePreference();
         });
     </script>
 </head>
@@ -68,10 +71,8 @@
     </section>
 
     <script>
-        // Dark Mode Toggle
-        document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-            document.body.classList.toggle("light-mode");
-        });
+        // Apply dark mode & fade-in effects
+        applyDarkModePreference();
 
         // Fade-in Effect
         const sections = document.querySelectorAll('.fade-in');
