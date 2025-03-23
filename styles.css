@@ -9,7 +9,6 @@ body {
     transition: background 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;  /* Ensures body covers full viewport height */
     overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
@@ -214,12 +213,14 @@ ul li {
 }
 
 /* Fix Double Scrolling Issue */
-html {
+html, body {
     overflow-x: hidden; /* Prevents side scrolling */
-    height: 100%; /* Ensures full page height */
+    overflow-y: auto; /* Ensures normal scrolling */
+    margin: 0;
+    padding: 0;
 }
 
-/* Ensure content fills space but doesn't create extra scrollbars */
+/* Ensure content sections fill space but don't stretch */
 #projects, #contact {
-    flex-grow: 1;  /* Ensures sections take up necessary space without causing overflow */
+    min-height: 60vh; /* Ensures they take space but don't force extra height */
 }
