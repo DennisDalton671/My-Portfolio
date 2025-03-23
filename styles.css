@@ -123,11 +123,13 @@ header p {
     text-decoration: underline;
 }
 
-/* Default: Dark Mode (Text is White) */
+/* Contact Section Fix */
 #contact {
     padding: 50px 20px;
-    background-color: #1a1a1a; /* Dark background */
-    color: white; /* Ensure text stays white */
+    background-color: #1a1a1a; /* Dark mode background */
+    color: white; /* Ensures text is white */
+    flex-shrink: 0; /* Prevents it from pushing past the viewport */
+    min-height: fit-content; /* Prevents unnecessary space */
 }
 
 /* Ensure Contact Links are Visible in Dark Mode */
