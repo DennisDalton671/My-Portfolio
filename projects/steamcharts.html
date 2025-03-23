@@ -42,19 +42,29 @@
     </footer>
 
     <script>
-        // Apply Dark Mode
-        applyDarkModePreference();
+        
+        document.addEventListener("DOMContentLoaded", function () {
+                const darkModeToggle = document.getElementById("dark-mode-toggle");
 
-        // Dark Mode Toggle
-        document.getElementById("dark-mode-toggle").addEventListener("click", function () {
+            // Check if dark mode was previously enabled
+                const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+
+            if (isDarkMode) {
+                document.body.classList.add("light-mode"); // or dark-mode depending on your CSS
+            }
+
+            // Toggle dark mode and save the preference
+            darkModeToggle.addEventListener("click", function () {
             document.body.classList.toggle("light-mode");
 
+            // Save the mode in localStorage
             if (document.body.classList.contains("light-mode")) {
                 localStorage.setItem("darkMode", "enabled");
             } else {
                 localStorage.setItem("darkMode", "disabled");
             }
         });
+    });
 
     </script>
     
