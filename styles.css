@@ -1,4 +1,7 @@
-/* General Styles */
+/* ========================== */
+/* GLOBAL STYLES */
+/* ========================== */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,29 +12,26 @@ body {
     transition: background 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;  /* Ensures body covers full viewport height */
-    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-
-/* Light Mode Styling */
+/* Light Mode */
 .light-mode {
     background-color: white;
     color: black;
 }
 
 .light-mode .project {
-    background-color: #e0e0e0; /* Slightly darker gray for better contrast */
+    background-color: #e0e0e0;
     color: black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.light-mode header {
-    background: linear-gradient(135deg, #ff6666, #cc0000);
-    color: white;
-}
+/* ========================== */
+/* HEADER & HERO SECTION */
+/* ========================== */
 
-/* Header Section */
 header {
     padding: 50px 20px;
     background: linear-gradient(135deg, #ff0000, #990000);
@@ -47,6 +47,32 @@ header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ff0000, #990000);
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ========================== */
+/* BUTTONS */
+/* ========================== */
 
 .btn {
     display: inline-block;
@@ -89,7 +115,31 @@ header p {
     background-color: #ff4444;
 }
 
-/* Project Section */
+/* Dark Mode Toggle - Positioned Top Right */
+.dark-mode-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.dark-mode-btn:hover {
+    transform: scale(1.1);
+}
+
+.light-mode .dark-mode-btn {
+    color: black;
+}
+
+/* ========================== */
+/* PROJECT SECTION */
+/* ========================== */
+
 #projects {
     padding: 50px 20px;
 }
@@ -124,228 +174,10 @@ header p {
     text-decoration: underline;
 }
 
-/* Default: Dark Mode (Text is White) */
-#contact {
-    padding: 50px 20px;
-    background-color: #1a1a1a; /* Dark background */
-    color: white; /* Ensure text stays white */
-}
+/* ========================== */
+/* ABOUT ME SECTION */
+/* ========================== */
 
-/* Ensure Contact Links are Visible in Dark Mode */
-#contact a {
-    color: #ff4444; /* Red color for visibility */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-/* Light Mode Adjustments */
-.light-mode #contact {
-    background-color: #f5f5f5; /* Light background */
-    color: black; /* Ensure text turns black */
-}
-
-/* Ensure Contact Links are Visible in Light Mode */
-.light-mode #contact a {
-    color: #cc0000; /* Darker red for visibility */
-}
-
-.light-mode #contact a:hover {
-    text-decoration: underline;
-}
-
-/* Fade-in Effect */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Video Container */
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    overflow: hidden;
-}
-
-/* Video Card for Better Separation */
-.video-card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 1280px;
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
-}
-
-/* Video Styling (Portrait Format) */
-.video-container video {
-    height: 75vh; /* Prevents it from being too large on PC */
-    max-height: 720px; /* Ensures proper size for 720p portrait */
-    width: auto; /* Maintain aspect ratio */
-    max-width: 400px; /* Ensures it stays centered */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
-    object-fit: contain;
-}
-
-/* Video Styling for Landscape (16:9) */
-.video-container.landscape video {
-    width: 80vw;  /* Takes 80% of the viewport width */
-    max-width: 640px; /* Maximum width for large screens */
-    height: auto; /* Keeps aspect ratio */
-    aspect-ratio: 16 / 9; /* Ensures 16:9 scaling */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
-    object-fit: contain;
-}
-
-/* Fix Bullet Point Alignment */
-ul {
-    list-style-position: inside; /* Moves bullet points inside the text */
-    text-align: center; /* Centers the list */
-    padding-left: 0; /* Removes unnecessary padding */
-}
-
-ul li {
-    margin-bottom: 10px; /* Adds spacing between bullet points */
-    font-size: 1.1rem; /* Slightly larger text for readability */
-}
-
-/* General Section Formatting */
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px; /* Increased gap for more separation */
-    padding: 60px 20px; /* More padding on top/bottom */
-}
-
-/* Card-style sections */
-.section-card {
-    background: #1a1a1a;
-    color: white;
-    padding: 30px;
-    border-radius: 12px; /* Slightly rounder corners */
-    box-shadow: 0px 6px 15px rgba(255, 0, 0, 0.4); /* More pronounced shadow */
-    max-width: 800px;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 30px; /* More space between sections */
-    border-left: 6px solid #ff4444; /* Left border highlight */
-    transition: transform 0.2s ease-in-out;
-}
-
-.section-card h2 {
-    margin-bottom: 15px; /* Adds space below the section title */
-}
-
-.section-card p {
-    line-height: 1.6; /* Increases spacing between lines for readability */
-    margin-bottom: 15px; /* Adds space below paragraph */
-}
-
-.section-card:hover {
-    transform: translateY(-3px); /* Slight lift on hover for effect */
-}
-
-/* Alternate background color */
-.section-card:nth-child(even) {
-    background: #222; /* Slightly lighter for contrast */
-}
-
-/* Make it readable in Light Mode */
-.light-mode .section-card {
-    background: #f9f9f9;
-    color: black;
-    border-left: 6px solid #cc0000; /* Adjust left border color */
-}
-
-.light-mode .section-card:nth-child(even) {
-    background: #e0e0e0;
-}
-
-/* Section Dividers */
-.section-divider {
-    width: 60%;
-    height: 4px;
-    background: linear-gradient(to right, transparent, #ff4444, transparent);
-    border-radius: 2px;
-    margin: 20px auto;
-    opacity: 0.7;
-}
-
-.icon-list {
-    list-style: none; 
-    padding: 0;
-    display: flex;
-    flex-direction: column;  /* Ensures list items stack properly */
-    align-items: flex-start; /* Aligns text properly */
-    gap: 10px;  /* Adds space between items */
-}
-
-.icon-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;  /* Space between icon & text */
-    flex-wrap: wrap; /* Prevents awkward line breaks */
-}
-
-.cta-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #ff0000, #990000);
-    color: white;
-    overflow: hidden;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#tagline {
-    font-size: 1.5rem;
-    font-weight: 300;
-    opacity: 0.9;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Dark Mode Toggle - Positioned Top Right */
-.dark-mode-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
-    transition: transform 0.2s ease-in-out;
-}
-
-.dark-mode-btn:hover {
-    transform: scale(1.1);
-}
-
-/* About Me Section */
 #about {
     padding: 60px 20px;
     text-align: center;
@@ -358,7 +190,27 @@ ul li {
     margin: 0 auto;
 }
 
-/* Contact Section Enhancements */
+/* ========================== */
+/* CONTACT SECTION */
+/* ========================== */
+
+#contact {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#contact a {
+    color: #ff4444;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Links Styling */
 .contact-links {
     display: flex;
     justify-content: center;
@@ -380,11 +232,6 @@ ul li {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Light Mode Fixes */
-.light-mode .dark-mode-btn {
-    color: black;
-}
-
 .light-mode .contact-icon {
     color: black;
 }
@@ -393,8 +240,117 @@ ul li {
     background: rgba(0, 0, 0, 0.1);
 }
 
-/* Animations */
+/* ========================== */
+/* CONTENT SECTIONS */
+/* ========================== */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+/* Card-style sections */
+.section-card {
+    background: #1a1a1a;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(255, 0, 0, 0.4);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+    border-left: 6px solid #ff4444;
+    transition: transform 0.2s ease-in-out;
+}
+
+.section-card h2 {
+    margin-bottom: 15px;
+}
+
+.section-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.section-card:hover {
+    transform: translateY(-3px);
+}
+
+.section-card:nth-child(even) {
+    background: #222;
+}
+
+.light-mode .section-card {
+    background: #f9f9f9;
+    color: black;
+    border-left: 6px solid #cc0000;
+}
+
+.light-mode .section-card:nth-child(even) {
+    background: #e0e0e0;
+}
+
+/* ========================== */
+/* VIDEO STYLING */
+/* ========================== */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Video Card */
+.video-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1280px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Video Styles */
+.video-container video {
+    height: 75vh;
+    max-height: 720px;
+    width: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+    object-fit: contain;
+}
+
+.video-container.landscape video {
+    width: 80vw;
+    max-width: 640px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+/* ========================== */
+/* ANIMATIONS */
+/* ========================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
