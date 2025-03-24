@@ -9,32 +9,78 @@
 <body>
     <header>
         <h1>BlockDrop AI</h1>
-        <p>An AI-powered block-dropping game that explores algorithmic decision-making.</p>
+        <p>A heuristic-based AI that plays a classic block-dropping game, with early attempts at machine learning.</p>
         <a href="../index.html" class="btn">Back to Portfolio</a>
     </header>
 
-    <section id="about">
-        <h2>About BlockDrop AI</h2>
-        <ul>
-            <li>🧠 <strong>AI Gameplay</strong> – The AI dynamically plays the game, optimizing for efficiency.</li>
-            <li>🔍 <strong>Machine Learning Concepts</strong> – Uses heuristic evaluation functions for decision-making.</li>
-            <li>🎮 <strong>Classic Puzzle Mechanics</strong> – Inspired by classic falling block games.</li>
-        </ul>
-    </section>
-
-    <section id="demo">
-        <h2>AI Demo</h2>
-        <div class="video-container">
-            <video autoplay loop muted playsinline>
-                <source src="../videos/BlockDropAIDemo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <section class="content-container">
+        <!-- About Section -->
+        <div class="section-card">
+            <h2>About BlockDrop AI</h2>
+            <p>
+                BlockDrop AI was my experiment in AI development, initially aiming to build a simple heuristic AI and later 
+                exploring machine learning techniques. The goal was to see if I could program an AI to play a block-dropping 
+                puzzle game effectively while experimenting with different approaches to AI decision-making.
+            </p>
+            <ul class="icon-list">
+                <li>🧠 <strong>Heuristic-Based AI</strong> – Uses a rule-based approach to optimize game moves.</li>
+                <li>🎓 <strong>Early Machine Learning</strong> – Implemented AI that learns but struggled with saving knowledge.</li>
+                <li>🕹 <strong>Classic Puzzle Mechanics</strong> – Inspired by retro block-dropping games.</li>
+            </ul>
         </div>
-    </section>
 
-    <section id="details">
-        <h2>Technical Details</h2>
-        <p>[Placeholder for AI logic, decision trees, and game mechanics.]</p>
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Gameplay Demo Section -->
+        <div class="section-card">
+            <h2>AI Demo</h2>
+            <div class="video-container landscape">
+                <video autoplay loop muted playsinline>
+                    <source src="../videos/BlockDropAIDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Challenges & Learning Section -->
+        <div class="section-card">
+            <h2>Challenges & Lessons Learned</h2>
+            <p>
+                While I successfully created a heuristic AI, I ran into issues when implementing machine learning. 
+                The AI struggled with saving learned data and visualizing its learning process, making it difficult to debug. 
+                However, this project taught me a lot about balancing AI parameters.
+            </p>
+            <ul class="icon-list">
+                <li>🛠 <strong>Machine Learning Challenges</strong> – Saving learned data and understanding AI decision-making.</li>
+                <li>⚖ <strong>AI Optimization</strong> – Learning when to try new moves vs. sticking to proven strategies.</li>
+                <li>📊 <strong>Parameter Balancing</strong> – Fine-tuning decision-making thresholds for AI efficiency.</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Technical Details -->
+        <div class="section-card">
+            <h2>Technical Details</h2>
+            <p>BlockDrop AI was built with the goal of experimenting with AI-driven gameplay in a puzzle-based environment.</p>
+            <ul class="icon-list">
+                <li>🔢 <strong>AI Type:</strong> Heuristic-based AI with early ML implementation.</li>
+                <li>⚙ <strong>Algorithms Used:</strong> Rule-based decision-making, weighted scoring system.</li>
+                <li>💾 <strong>Machine Learning Attempt:</strong> Early reinforcement learning, but faced challenges in saving progress.</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Links & Resources -->
+        <div class="section-card">
+            <h2>Project Links</h2>
+            <ul class="icon-list">
+                <li>📂 <a href="https://github.com/DennisDalton671/BlockDrop_AI" target="_blank"><strong>GitHub Repository</strong></a> – View the source code.</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
@@ -82,7 +128,6 @@
         });
         sections.forEach(section => observer.observe(section));
     });
-</script>
-    
+    </script>
 </body>
 </html>
