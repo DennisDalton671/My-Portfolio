@@ -184,19 +184,19 @@ header p {
     justify-content: center;
 }
 
-/* Flexbox container to ensure side-by-side layout */
+/* Flexbox container for a balanced side-by-side layout */
 .about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px; /* Expands content width */
-    gap: 50px;
+    max-width: 1400px; /* Increased max-width for larger screens */
+    gap: 60px;
 }
 
 /* Profile Image Styling */
 .about-image img {
-    max-width: 280px; /* Keeps image at a reasonable size */
+    max-width: 260px; /* Keeps image at a reasonable size */
     height: auto;
     border-radius: 50%;
     box-shadow: 0px 6px 15px rgba(255, 0, 0, 0.4);
@@ -207,14 +207,14 @@ header p {
     transform: scale(1.05);
 }
 
-/* Expands the About Me text area */
+/* Expanding About Me Text Area */
 .about-text {
-    flex: 1; /* Allows it to take up available space */
-    max-width: 800px; /* Ensures text doesn't become too wide */
+    flex: 1.5; /* Increased to take up even more space */
+    max-width: 900px; /* Expanded max-width */
     text-align: left;
-    line-height: 1.6;
+    line-height: 1.7;
     background: #222;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
@@ -231,22 +231,24 @@ header p {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .about-container {
         flex-direction: column;
-        gap: 30px;
+        gap: 40px;
         text-align: center;
     }
 
     .about-image img {
-        max-width: 200px;
+        max-width: 220px;
     }
 
     .about-text {
-        width: 90%;
+        width: 95%;
         text-align: center;
+        padding: 30px;
     }
 }
+
 /* ========================== */
 /* CONTACT SECTION */
 /* ========================== */
