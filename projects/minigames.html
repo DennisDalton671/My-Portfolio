@@ -3,53 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniGames Project</title>
+    <title>MiniGames | Dennis Dalton</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
         <h1>MiniGames</h1>
-        <p>A collection of small games designed to enhance programming skills and explore game development techniques.</p>
+        <p>A growing collection of small, fun mini-games built to improve my programming skills.</p>
         <a href="../index.html" class="btn">Back to Portfolio</a>
     </header>
 
-    <section id="project-overview">
-        <h2>About MiniGames</h2>
-        <p>MiniGames is a collection of small games, each designed to explore different game mechanics and programming techniques.</p>
-        <ul>
-            <li>🚀 **Space Rocks** – A physics-based asteroid avoidance game</li>
-            <li>🐍 **Neon Serpent** – A modern take on the classic snake game</li>
-            <li>🐦 **Wing Dash** – A fast-paced platforming challenge</li>
-        </ul>
-    </section>
+    <section class="content-container">
+        <!-- About Section -->
+        <div class="section-card">
+            <h2>About MiniGames</h2>
+            <p>The MiniGames app is a personal passion project designed as an ongoing way to learn and experiment with different programming techniques.  
+               The goal was to create a structure where I could easily add new games whenever I felt like learning something new or just having fun.
+               Each mini-game serves as a learning experience, helping me refine various aspects of game development, including UI design, physics, and logic systems.</p>
+            <ul class="icon-list">
+                <li>🎮 <strong>Always Expanding</strong> – A continuously growing collection of fun mini-games.</li>
+                <li>🛠 <strong>Learning-Focused</strong> – Each game is built to explore new programming concepts.</li>
+                <li>📱 <strong>Fully Functional App</strong> – Games can be added seamlessly to an existing framework.</li>
+            </ul>
+        </div>
 
-    <section id="project-demo">
-        <h2>Gameplay Demo</h2>
-        <div class="video-container">
-            <video autoplay loop muted playsinline>
-                <source src="../videos/MiniGamesDemo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Gameplay Demo Section -->
+        <div class="section-card">
+            <h2>Gameplay Demo</h2>
+            <div class="video-container landscape">
+                <video autoplay loop muted playsinline>
+                    <source src="../videos/MiniGamesDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Challenges & Learning Section -->
+        <div class="section-card">
+            <h2>Challenges & Lessons Learned</h2>
+            <p>MiniGames helped me strengthen my skills in several key areas of game development.  
+               Each new game brought unique challenges, from UI design to physics simulations.</p>
+            <ul class="icon-list">
+                <li>🎨 <strong>Improving UI Design</strong> – Making games more visually engaging.</li>
+                <li>🎵 <strong>Integrating Audio</strong> – Adding sound effects & music for better feedback.</li>
+                <li>🌍 <strong>Physics & Game Logic</strong> – Implementing mechanics like gravity & momentum.</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- Technical Details -->
+        <div class="section-card">
+            <h2>Technical Details</h2>
+            <p>The MiniGames app is structured to allow for easy game additions while maintaining a consistent user experience.</p>
+            <ul class="icon-list">
+                <li>📲 <strong>Android Studio & Kotlin</strong> – Built using a modular structure for flexibility.</li>
+                <li>🎮 <strong>Multiple Games in One App</strong> – Seamlessly integrates new mini-games.</li>
+                <li>🚀 <strong>Optimized Performance</strong> – Lightweight design to run smoothly on mobile.</li>
+            </ul>
+        </div>
+
+        <div class="section-divider"></div> <!-- Divider -->
+
+        <!-- GitHub & Source Code -->
+        <div class="section-card">
+            <h2>GitHub Repository</h2>
+            <p>Explore the source code and project structure on GitHub:</p>
+            <p><a href="https://github.com/DennisDalton671/MiniGames" target="_blank">MiniGames GitHub Repo</a></p>
         </div>
     </section>
 
-    <section id="tech-stack">
-        <h2>Technologies Used</h2>
-        <ul>
-            <li>🕹️ **Android Studio** – Development Environment</li>
-            <li>🎨 **Jetpack Compose** – UI Design</li>
-            <li>🧠 **Custom Game Logic** – Implementing physics & movement</li>
-        </ul>
-    </section>
-
-    <section id="github-link">
-        <h2>View the Code</h2>
-        <p>You can check out the source code on GitHub:</p>
-        <a href="https://github.com/DennisDalton671/MiniGames" class="btn">View on GitHub</a>
-    </section>
-
     <footer>
-        <p>© 2024 Dennis Dalton | <a href="../index.html">Back to Portfolio</a></p>
+        <p>Created by Dennis Dalton | <a href="../index.html">Back to Portfolio</a></p>
     </footer>
 
     <script>
@@ -93,7 +122,6 @@
         });
         sections.forEach(section => observer.observe(section));
     });
-</script>
-    
+    </script>
 </body>
 </html>
