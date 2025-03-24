@@ -306,6 +306,35 @@ header p {
     background: #e0e0e0;
 }
 
+/* Future Projects Section */
+#future-projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#future-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff4444;
+}
+
+/* Ensure the card layout matches the rest of the site */
+#future-projects .section-card {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Light Mode Styling for Future Projects */
+.light-mode #future-projects .section-card {
+    background: #f9f9f9; /* Light background for contrast */
+    color: black;
+    border-left: 6px solid #cc0000; /* Adjusted border for visibility */
+}
+
+.light-mode #future-projects h2 {
+    color: #cc0000; /* Adjust section title color */
+}
+
 /* About Me Section - Side by Side Layout */
 .about-container {
     display: flex;
