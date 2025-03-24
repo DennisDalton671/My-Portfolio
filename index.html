@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Dennis Dalton | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -28,46 +28,60 @@
     </script>
 </head>
 <body>
-    <header>
-        <h1>Dennis Dalton</h1>
-        <p>Innovative Problem-Solver | Passionate About Technology & Engineering</p>
-        <a href="#" class="btn">Download Resume</a>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Dennis Dalton</h1>
+            <p id="tagline"></p> <!-- Animated Typing Effect -->
+            <a href="#" class="btn">Download Resume</a>
+        </div>
+        <button id="dark-mode-toggle" class="dark-mode-btn">🌙</button>
     </header>
-    
+
+    <!-- About Me Section -->
+    <section id="about" class="fade-in">
+        <div class="section-card">
+            <h2>About Me</h2>
+            <p>
+                Passionate about **game development, AI, and technology**, I love creating interactive experiences that challenge and entertain.  
+                This portfolio showcases projects where I’ve **explored AI, physics, and UI design** in game development and software.  
+                Constantly learning, constantly building. 🚀
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="fade-in">
         <h2>Projects</h2>
-
         <div class="project">
             <h3>FreeRunners</h3>
-            <p>An online or single-player 3D platforming game where the main objective is to reach the end goal as quickly as possible.</p>
+            <p>Fast-paced 3D platformer inspired by Fall Guys with multiplayer and leaderboards.</p>
             <a href="projects/freerunners.html" class="btn">View Project</a>
         </div>
-        
         <div class="project">
             <h3>SteamCharts</h3>
-            <p>An Android application that provides a seamless interface for gamers to track statistics of Steam games.</p>
+            <p>Android app for real-time Steam player statistics & discounts.</p>
             <a href="projects/steamcharts.html" class="btn">View Project</a>
         </div>
-        
         <div class="project">
             <h3>BlockDrop AI</h3>
-            <p>An implementation of a block-dropping puzzle game with an AI agent designed to play autonomously.</p>
+            <p>A heuristic AI playing a falling-block puzzle game.</p>
             <a href="projects/blockdrop-ai.html" class="btn">View Project</a>
         </div>
-
         <div class="project">
             <h3>MiniGames</h3>
-            <p>A collection of small games developed to enhance programming skills and explore various game development techniques.</p>
+            <p>A collection of small games I create for fun & learning.</p>
             <a href="projects/minigames.html" class="btn">View Project</a>
         </div>
-        
     </section>
-    
+
+    <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:DennisDalton671@gmail.com">DennisDalton671@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/DennisDalton671">github.com/DennisDalton671</a></p>
+        <div class="contact-links">
+            <a href="mailto:DennisDalton671@gmail.com" class="contact-icon">📧 Email</a>
+            <a href="https://github.com/DennisDalton671" class="contact-icon">🐙 GitHub</a>
+        </div>
     </section>
 
     <script>
@@ -106,6 +120,17 @@
             });
         });
 
+        // Typing Effect for Tagline
+        const tagline = document.getElementById("tagline");
+        const phrases = ["Innovative Problem-Solver", "AI & Game Developer", "Always Learning, Always Building"];
+        let i = 0;
+        function typeEffect() {
+            tagline.textContent = phrases[i];
+            i = (i + 1) % phrases.length;
+            setTimeout(typeEffect, 3000);
+        }
+        typeEffect();
+
         // Fade-in Effect
         const sections = document.querySelectorAll('.fade-in');
         const observer = new IntersectionObserver(entries => {
@@ -117,6 +142,7 @@
         });
         sections.forEach(section => observer.observe(section));
     });
-</script>
+    </script>
 </body>
 </html>
+
