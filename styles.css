@@ -190,6 +190,18 @@ header p {
     margin: 0 auto;
 }
 
+/* Light Mode Fix for About Me */
+.light-mode #about .section-card {
+    background: #f9f9f9; /* Light background */
+    color: black; /* Ensures text turns black */
+    border-left: 6px solid #cc0000; /* Adjust left border color */
+}
+
+.light-mode #about .section-card h2,
+.light-mode #about .section-card p {
+    color: black; /* Make sure all text is readable */
+}
+
 /* ========================== */
 /* CONTACT SECTION */
 /* ========================== */
