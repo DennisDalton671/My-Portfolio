@@ -306,6 +306,50 @@ header p {
     background: #e0e0e0;
 }
 
+/* About Me Section - Side by Side Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.about-image img {
+    width: 250px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes it a rounded image */
+    box-shadow: 0px 6px 15px rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Make it readable in Light Mode */
+.light-mode .about-text {
+    color: black;
+}
+
 /* ========================== */
 /* VIDEO STYLING */
 /* ========================== */
